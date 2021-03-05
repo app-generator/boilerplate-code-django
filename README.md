@@ -159,6 +159,16 @@ $ sudo docker-compose pull && sudo docker-compose build && sudo docker-compose u
 
 Visit `http://localhost:5005` in your browser. The app should be up & running.
 
+> Create Django `superuser` 
+
+```bash
+$ # Get Container ID
+$ docker ps
+$ 
+$ # Call docker exec and CREATE the Superuser
+$ docker exec -it <APPSEED_CONTAINER_ID> python manage.py createsuperuser
+```
+
 <br />
 
 ### [Gunicorn](https://gunicorn.org/)
